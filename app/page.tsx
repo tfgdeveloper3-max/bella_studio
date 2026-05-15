@@ -2,7 +2,6 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import BentoSection from "@/components/sections/BentoSection";
-import FAQSection from "@/components/sections/FaqSection";
 import HeroSection from "@/components/sections/hero";
 import PricingSection from "@/components/sections/pricingSection";
 import ServicesSection from "@/components/sections/ServicesSection";
@@ -20,7 +19,6 @@ export default function Home() {
       <ShowcaseSection />
       <ServicesSection />
       <PricingSection />
-      <FAQSection />
       <Footer />
     </main>
   );

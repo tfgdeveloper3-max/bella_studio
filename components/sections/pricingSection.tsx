@@ -65,9 +65,7 @@ export default function PricingSection() {
                 </div>
             </m.div>
 
-            <div className={styles.divider} aria-hidden />
-
-            <m.div className={styles.featGrid} variants={fadeUp(0.05)} initial="hidden" animate={inView ? 'show' : 'hidden'}>
+            {/* <m.div className={styles.featGrid} variants={fadeUp(0.05)} initial="hidden" animate={inView ? 'show' : 'hidden'}>
                 <div className={styles.featCard}>
                     <h3 className={styles.featTitle}>All the AI tools in a single place</h3>
                     <p className={styles.featDesc}>Access multiple top-performing generative models from a single platform.</p>
@@ -101,11 +99,9 @@ export default function PricingSection() {
                         ))}
                     </div>
                 </div>
-            </m.div>
+            </m.div> */}
 
-            <div className={styles.divider} aria-hidden />
-
-            <m.div className={styles.entWrap} variants={fadeUp(0.08)} initial="hidden" animate={inView ? 'show' : 'hidden'}>
+            {/* <m.div className={styles.entWrap} variants={fadeUp(0.08)} initial="hidden" animate={inView ? 'show' : 'hidden'}>
                 <div className={styles.entHeader}>
                     <div className={styles.eyebrow}>ENTERPRISE</div>
                     <h2 className={styles.entHeading}>Enterprise features built for scale</h2>
@@ -120,7 +116,7 @@ export default function PricingSection() {
                         </div>
                     ))}
                 </div>
-            </m.div>
+            </m.div> */}
 
             <div className={styles.divider} aria-hidden />
 
