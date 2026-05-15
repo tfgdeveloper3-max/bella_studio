@@ -2,15 +2,19 @@
 
 import React, { useState } from 'react';
 import { m, type Variants } from 'framer-motion';
+import {
+    Sparkles, Clapperboard, Film, AudioLines,
+    Car, Bike, Leaf, Megaphone, Zap
+} from 'lucide-react';
 import styles from '@/components/css/Bentosection.module.css';
 
 const FILTERS = ['ALL', 'IMAGE', 'VIDEO', 'AUDIO'];
 
 const TOOLS = [
-    { emoji: '🌀', label: 'IMAGE GENERATOR', icon: '◈', bg: 'linear-gradient(135deg,#1a0533,#4a1060)', category: 'IMAGE' },
-    { emoji: '🎬', label: 'VIDEO GENERATOR', icon: '▶', bg: 'linear-gradient(135deg,#0a2040,#1a4070)', category: 'VIDEO' },
-    { emoji: '🥊', label: 'VIDEO EDITOR', icon: '◈', bg: 'linear-gradient(135deg,#200a2a,#5a1070)', category: 'VIDEO' },
-    { emoji: '🎵', label: 'AUDIO', icon: '♫', bg: 'linear-gradient(135deg,#0a0a20,#2a2a5a)', category: 'AUDIO' },
+    { Icon: Sparkles, label: 'IMAGE GENERATOR', bg: 'linear-gradient(135deg,#1a0533,#4a1060)', category: 'IMAGE' },
+    { Icon: Clapperboard, label: 'VIDEO GENERATOR', bg: 'linear-gradient(135deg,#0a2040,#1a4070)', category: 'VIDEO' },
+    { Icon: Film, label: 'VIDEO EDITOR', bg: 'linear-gradient(135deg,#200a2a,#5a1070)', category: 'VIDEO' },
+    { Icon: AudioLines, label: 'AUDIO', bg: 'linear-gradient(135deg,#0a0a20,#2a2a5a)', category: 'AUDIO' },
 ];
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -46,7 +50,7 @@ export default function BentoSection() {
                     transition={{ duration: 0.55, ease: EASE }}
                 >
                     <h2 className={styles.heading}>
-                        Start simple.<br />Scale when you're ready
+                        Start Simple.<br />Scale When You&apos;re Ready
                     </h2>
                     <p className={styles.subheading}>
                         From a single tool to a complete workflow, at your own pace.
@@ -103,9 +107,9 @@ export default function BentoSection() {
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.3, delay: i * 0.06 }}
                             >
-                                <div className={styles.toolEmoji}>{tool.emoji}</div>
+                                <div className={styles.toolEmoji}><tool.Icon size={24} /></div>
                                 <div className={styles.toolLabel}>
-                                    <span>{tool.icon}</span> {tool.label}
+                                    {tool.label}
                                 </div>
                             </m.div>
                         ))}
@@ -135,8 +139,8 @@ export default function BentoSection() {
                             </defs>
                             <path d="M20 80 C70 80, 120 150, 180 130" stroke="url(#lineGrad)" strokeWidth="2.5" strokeLinecap="round" />
                         </svg>
-                        <div className={`${styles.node} ${styles.n1}`}><span>🚗</span></div>
-                        <div className={`${styles.node} ${styles.n2}`}><span>🚴</span></div>
+                        <div className={`${styles.node} ${styles.n1}`}><Car size={16} /></div>
+                        <div className={`${styles.node} ${styles.n2}`}><Bike size={16} /></div>
                         <span className={`${styles.collabTag} ${styles.tagBlue}`}>Paolo</span>
                         <span className={`${styles.collabTag} ${styles.tagPink}`}>Marina</span>
                     </div>
@@ -154,11 +158,11 @@ export default function BentoSection() {
 
                     <div className={styles.projectCards}>
                         <div className={styles.projCard}>
-                            <div className={`${styles.projThumb} ${styles.ptGreen}`}>🌿</div>
+                            <div className={`${styles.projThumb} ${styles.ptGreen}`}><Leaf size={20} /></div>
                             <div className={styles.projName}>BRAND PROJECT</div>
                         </div>
                         <div className={styles.projCard}>
-                            <div className={`${styles.projThumb} ${styles.ptWine}`}>🕊️</div>
+                            <div className={`${styles.projThumb} ${styles.ptWine}`}><Megaphone size={20} /></div>
                             <div className={styles.projName}>CAMPAIGN ASSETS</div>
                         </div>
                     </div>
@@ -181,7 +185,7 @@ export default function BentoSection() {
                             animate={{ scale: [1, 1.05, 1], opacity: [0.5, 1, 0.5] }}
                             transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
                         >
-                            🏀
+                            <Zap size={28} />
                         </m.div>
                         <button className={styles.runBtn}>RUN APP</button>
                     </div>

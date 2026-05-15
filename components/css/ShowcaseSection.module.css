@@ -1,7 +1,3 @@
-/* =============================================
-   ShowcaseSection.module.css — Dark Void Theme
-   ============================================= */
-
 .section {
     position: relative;
     width: 100%;
@@ -47,7 +43,7 @@
 }
 
 .eyebrow {
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.2em;
     color: #a855f7;
@@ -66,7 +62,7 @@
 }
 
 .hTitle {
-    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-size: clamp(2rem, 6vw, 4.5rem) !important;
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.035em;
@@ -75,7 +71,7 @@
 }
 
 .hTitle em {
-    font-style: italic;
+    font-style: normal;
     color: rgba(216, 180, 254, .75);
 }
 
@@ -92,7 +88,7 @@
     background: transparent;
     color: #a855f7;
     border: 1.5px solid #a855f7;
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
     white-space: nowrap;
@@ -114,14 +110,14 @@
 }
 
 .statNum {
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 800;
     color: #fff;
     line-height: 1;
 }
 
 .statLabel {
-    font-size: 0.68rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, .35);
     margin-top: 2px;
     letter-spacing: .04em;
@@ -167,7 +163,7 @@
     border: 1px solid rgba(255, 255, 255, .08);
     background: rgba(255, 255, 255, .03);
     white-space: nowrap;
-    font-size: 0.78rem;
+    font-size: 1rem;
     font-weight: 500;
     color: rgba(255, 255, 255, .45);
     transition: all 0.2s;
@@ -198,7 +194,7 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 500;
     color: rgba(255, 255, 255, .28);
     letter-spacing: 0.06em;
@@ -215,12 +211,9 @@
     overflow-y: visible;
     scrollbar-width: none;
     cursor: grab;
-    /* prevent text select during drag */
     -webkit-user-select: none;
     user-select: none;
-    /* smooth momentum scroll on iOS */
     -webkit-overflow-scrolling: touch;
-    /* hide scrollbar on webkit */
     scroll-snap-type: x mandatory;
 }
 
@@ -236,7 +229,6 @@
     border: 1px solid rgba(255, 255, 255, .07);
     background: #0e0e0e;
     scroll-snap-align: start;
-    /* pointer-events remain active for click */
     pointer-events: auto;
     transition: border-color 0.3s;
 }
@@ -263,9 +255,11 @@
 }
 
 .cardEmoji {
-    font-size: 4.5rem;
-    z-index: 1;
-    filter: drop-shadow(0 0 16px currentColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.85);
+    filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.4));
 }
 
 /* ── Colour themes ── */
@@ -365,14 +359,14 @@
 }
 
 .cardCat {
-    font-size: 0.65rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: .12em;
     margin-bottom: .4rem;
 }
 
 .cardTitle {
-    font-size: 1.05rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: #fff;
     letter-spacing: -.02em;
@@ -380,7 +374,7 @@
 }
 
 .cardDesc {
-    font-size: 0.76rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, .38);
     line-height: 1.55;
 }
@@ -401,7 +395,7 @@
 }
 
 .ctag {
-    font-size: 0.6rem;
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: .06em;
     padding: 3px 8px;
@@ -417,7 +411,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     color: rgba(255, 255, 255, .35);
     transition: all .25s;
     flex-shrink: 0;
@@ -446,7 +440,7 @@
     background: rgba(255, 255, 255, .05);
     border: 1px solid rgba(255, 255, 255, .1);
     color: rgba(255, 255, 255, .5);
-    font-size: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -515,14 +509,14 @@
 }
 
 .ctaLeft h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: #fff;
     letter-spacing: -.02em;
 }
 
 .ctaLeft p {
-    font-size: 0.82rem;
+    font-size: 1.2rem;
     color: rgba(216, 180, 254, .55);
     margin-top: .3rem;
 }
@@ -539,7 +533,7 @@
     background: #a855f7;
     color: #fff;
     border: none;
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.25s;
@@ -556,7 +550,7 @@
     background: transparent;
     color: rgba(255, 255, 255, .55);
     border: 1px solid rgba(255, 255, 255, .12);
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.25s;

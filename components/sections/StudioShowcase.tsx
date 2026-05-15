@@ -38,9 +38,9 @@ const MENU: Record<string, { icon: string; title: string; desc: string }[]> = {
 };
 
 const PANEL: Record<string, { headline: string; body: string; tag: string }> = {
-  suite: { tag: 'STUDIO',    headline: "The world's most powerful\ncreative operating system.", body: 'Every AI model for video, image, and audio — unified in one intelligent workspace. Direct photoshoots, cast characters, stay on brand at any scale.' },
-  api:   { tag: 'DEVELOPER', headline: 'Build anything\non our infrastructure.',                body: 'Production-grade endpoints, sub-100ms latency, and a generous free tier. Ship AI-powered features without managing a single GPU.' },
-  stock: { tag: 'LIBRARY',   headline: "The world's creative library.\nReady to use.",          body: '250M+ photos, vectors, icons and templates. Licensed for commercial use, connected to every workflow.' },
+  suite: { tag: 'STUDIO',    headline: "The World's Most Powerful\nCreative Operating System.", body: 'Every AI model for video, image, and audio — unified in one intelligent workspace. Direct photoshoots, cast characters, stay on brand at any scale.' },
+  api:   { tag: 'DEVELOPER', headline: 'Build Anything\nOn Our Infrastructure.',                body: 'Production-grade endpoints, sub-100ms latency, and a generous free tier. Ship AI-powered features without managing a single GPU.' },
+  stock: { tag: 'LIBRARY',   headline: "The World's Creative Library.\nReady To Use.",          body: '250M+ photos, vectors, icons and templates. Licensed for commercial use, connected to every workflow.' },
 };
 
 const fadeUp: Variants = {
@@ -70,7 +70,7 @@ export default function StudioSection() {
 
       <div className={styles.topText}>
         <m.h2 className={styles.heading} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={VP} transition={{ duration: 0.6, ease: EASE }}>
-          One place to create anything
+          One Place To Create Anything
         </m.h2>
         <m.p className={styles.subheading} initial={{ opacity: 0, y: 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={VP} transition={{ duration: 0.6, delay: 0.1, ease: EASE }}>
           Pick your starting point. Every tool, every model, every format.

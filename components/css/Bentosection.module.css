@@ -1,8 +1,3 @@
-/* ============================================
-   BentoSection.module.css
-   Dark Void — Purple Theme
-   ============================================ */
-
 .section {
     position: relative;
     width: 100%;
@@ -47,10 +42,8 @@
     z-index: 1;
 }
 
-.topLeft {}
-
 .heading {
-    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-size: clamp(2rem, 6vw, 4.5rem) !important;
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: -0.03em;
@@ -59,7 +52,7 @@
 }
 
 .subheading {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     color: rgba(216, 180, 254, 0.6);
     margin-top: 0.5rem;
 }
@@ -116,7 +109,7 @@
 }
 
 .c1Text h3 {
-    font-size: 1.1rem;
+    font-size: 1.6rem !important;
     font-weight: 800;
     color: #ffffff;
     margin-bottom: 0.5rem;
@@ -124,7 +117,7 @@
 }
 
 .c1Text p {
-    font-size: 0.78rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.38);
     line-height: 1.6;
 }
@@ -142,7 +135,7 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: transparent;
     color: rgba(255, 255, 255, 0.35);
-    font-size: 0.72rem;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s;
@@ -179,9 +172,12 @@
 }
 
 .toolEmoji {
-    font-size: 2rem;
     z-index: 1;
     margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .toolLabel {
@@ -191,7 +187,7 @@
     right: 0;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
     padding: 18px 8px 8px;
-    font-size: 0.6rem;
+    font-size: 1rem;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.65);
     letter-spacing: 0.06em;
@@ -225,7 +221,7 @@
 }
 
 .c2Inner h3 {
-    font-size: 1.2rem;
+    font-size: 1.6rem !important;
     font-weight: 800;
     color: #ffffff;
     line-height: 1.25;
@@ -233,13 +229,12 @@
 }
 
 .c2Inner p {
-    font-size: 0.78rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.42);
     line-height: 1.65;
     margin-top: 0.6rem;
 }
 
-/* Node canvas */
 .nodeCanvas {
     position: absolute;
     right: 0;
@@ -266,7 +261,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .n1 {
@@ -287,7 +282,7 @@
     position: absolute;
     padding: 4px 11px;
     border-radius: 999px;
-    font-size: 0.65rem;
+    font-size: 1rem;
     font-weight: 700;
     white-space: nowrap;
 }
@@ -306,7 +301,6 @@
     right: 30%;
 }
 
-/* ── Card 3: Team ── */
 .c3 {
     grid-column: 2;
     grid-row: 2;
@@ -326,7 +320,7 @@
 }
 
 .c3 h3 {
-    font-size: 1.1rem;
+    font-size: 1.6rem !important;
     font-weight: 800;
     color: #ffffff;
     position: relative;
@@ -335,7 +329,7 @@
 }
 
 .c3 p {
-    font-size: 0.78rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.42);
     line-height: 1.6;
     margin-top: 0.5rem;
@@ -368,7 +362,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .ptGreen {
@@ -380,13 +374,12 @@
 }
 
 .projName {
-    font-size: 0.62rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     color: rgba(255, 255, 255, 0.45);
 }
 
-/* ── Card 4: Workflow ── */
 .c4 {
     grid-column: 3;
     grid-row: 1 / 3;
@@ -408,7 +401,7 @@
 }
 
 .c4 h3 {
-    font-size: 1.1rem;
+    font-size: 1.6rem !important;
     font-weight: 800;
     color: #ffffff;
     position: relative;
@@ -417,7 +410,7 @@
 }
 
 .c4 p {
-    font-size: 0.78rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.42);
     line-height: 1.6;
     margin-top: 0.5rem;
@@ -443,10 +436,12 @@
 }
 
 .wfIcon {
-    font-size: 5rem;
     filter: drop-shadow(0 0 20px rgba(20, 184, 166, 0.4));
     z-index: 1;
-    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .runBtn {
@@ -459,7 +454,7 @@
     border: 2px solid rgba(255, 255, 255, 0.6);
     background: transparent;
     color: #ffffff;
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.06em;
     cursor: pointer;
@@ -532,6 +527,6 @@
     }
 
     .heading {
-        font-size: 1.8rem;
+        font-size: 1.8rem !important;
     }
 }

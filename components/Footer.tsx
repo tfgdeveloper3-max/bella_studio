@@ -29,7 +29,7 @@ export default function Footer() {
                 <div className={styles.bannerOverlay} aria-hidden />
                 <div className={styles.bannerContent}>
                     <p className={styles.bannerEyebrow}>BELLA J STUDIO</p>
-                    <h2 className={styles.bannerHeading}>Be <em>Void.</em></h2>
+                    <h2 className={styles.bannerHeading}>Be Void.<em></em></h2>
                     <p className={styles.bannerSub}>The creative platform to direct your best work.</p>
                     <button className={styles.bannerBtn}>Start creating →</button>
                 </div>

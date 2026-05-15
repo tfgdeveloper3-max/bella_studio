@@ -1,7 +1,3 @@
-/* =============================================
-   PricingSection.module.css — Dark Void Theme
-   ============================================= */
-
 .section {
     position: relative;
     width: 100%;
@@ -39,7 +35,7 @@
 
 /* Shared eyebrow */
 .eyebrow {
-    font-size: 0.68rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.2em;
     color: #a855f7;
@@ -74,7 +70,7 @@
 }
 
 .heading {
-    font-size: clamp(1.9rem, 3.5vw, 2.9rem);
+    font-size: clamp(2rem, 6vw, 4.5rem) !important;
     font-weight: 800;
     line-height: 1.12;
     letter-spacing: -0.03em;
@@ -129,7 +125,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-size: 0.62rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.14em;
     color: #a855f7;
@@ -147,7 +143,7 @@
 }
 
 .planName {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 800;
     color: #fff;
     letter-spacing: -0.025em;
@@ -155,7 +151,7 @@
 }
 
 .planDesc {
-    font-size: 0.82rem;
+    font-size: 1.2rem;
     color: rgba(255, 255, 255, .42);
     line-height: 1.65;
 }
@@ -173,14 +169,14 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 0.78rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, .5);
 }
 
 .planList li::before {
     content: '✓';
     color: #a855f7;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
 }
 
 .planListEnt li::before {
@@ -193,7 +189,7 @@
     gap: 7px;
     padding: 10px 22px;
     border-radius: 8px;
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
     width: fit-content;
@@ -244,7 +240,7 @@
 }
 
 .featTitle {
-    font-size: 1.15rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: #fff;
     letter-spacing: -0.02em;
@@ -252,7 +248,7 @@
 }
 
 .featDesc {
-    font-size: 0.78rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, .38);
     line-height: 1.6;
     margin-bottom: 1.3rem;
@@ -273,7 +269,7 @@
     gap: 10px;
     padding: 9px 14px;
     border-bottom: 1px solid rgba(255, 255, 255, .05);
-    font-size: 0.72rem;
+    font-size: 1rem;
 }
 
 .mockRow:last-child {
@@ -284,7 +280,7 @@
     background: #181818;
     font-weight: 600;
     color: rgba(255, 255, 255, .35);
-    font-size: 0.65rem;
+    font-size: 1rem;
     letter-spacing: 0.08em;
 }
 
@@ -305,7 +301,7 @@
 
 .mrDots {
     color: rgba(255, 255, 255, .2);
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-left: auto;
 }
 
@@ -313,7 +309,7 @@
     display: inline-block;
     padding: 2px 8px;
     border-radius: 4px;
-    font-size: 0.62rem;
+    font-size: 1rem;
     font-weight: 700;
 }
 
@@ -390,7 +386,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.72rem;
+    font-size: 1rem;
     font-weight: 700;
 }
 
@@ -400,13 +396,13 @@
 }
 
 .crName {
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 600;
     color: rgba(255, 255, 255, .7);
 }
 
 .crEmail {
-    font-size: 0.62rem;
+    font-size: 1dvb;
     color: rgba(255, 255, 255, .28);
 }
 
@@ -420,7 +416,7 @@
 .crBarRow {
     display: flex;
     justify-content: space-between;
-    font-size: 0.58rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, .28);
 }
 
@@ -448,7 +444,7 @@
 }
 
 .entHeading {
-    font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+    font-size: clamp(2rem, 6vw, 4.5rem) !important;
     font-weight: 800;
     color: #fff;
     letter-spacing: -0.025em;
@@ -456,7 +452,7 @@
 }
 
 .entSub {
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     color: rgba(255, 255, 255, .38);
 }
 
@@ -478,12 +474,12 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 0.8rem;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: #a855f7;
 }
 
 .entItemTitle {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #fff;
     margin-bottom: 0.35rem;
@@ -491,7 +487,7 @@
 }
 
 .entItemDesc {
-    font-size: 0.76rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, .38);
     line-height: 1.6;
 }
@@ -507,7 +503,7 @@
 }
 
 .testHeading {
-    font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+    font-size: clamp(2rem, 6vw, 4.5rem) !important;
     font-weight: 800;
     color: #fff;
     letter-spacing: -0.025em;
@@ -537,7 +533,7 @@
     position: absolute;
     top: 1rem;
     right: 1.4rem;
-    font-size: 5rem;
+    font-size: 7rem;
     font-family: Georgia, serif;
     color: rgba(168, 85, 247, .08);
     line-height: 1;
@@ -553,7 +549,7 @@
 }
 
 .testLogo {
-    font-size: 0.82rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: rgba(255, 255, 255, .35);
     letter-spacing: 0.04em;
@@ -575,7 +571,7 @@
 }
 
 .testQuote {
-    font-size: 0.82rem;
+    font-size: 1.2rem;
     color: rgba(255, 255, 255, .58);
     line-height: 1.7;
     font-style: italic;
@@ -583,13 +579,13 @@
 }
 
 .testName {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #fff;
 }
 
 .testRole {
-    font-size: 0.7rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, .3);
     margin-top: 2px;
 }

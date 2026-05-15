@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { Playfair_Display } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "./globals.css";
 import { domAnimation, LazyMotion } from "framer-motion";
 
-const playfair = Playfair_Display({
+const raleway = Raleway({
   subsets: ["latin"],
-  variable: "--font-playfair",
-  weight: ["400", "700"]
+  variable: "--font-raleway",
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={raleway.variable}>
+      <body className="font-sans">
         <LazyMotion features={domAnimation} strict>
           {children}
         </LazyMotion>

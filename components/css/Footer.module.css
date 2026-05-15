@@ -1,14 +1,9 @@
-/* =============================================
-   Footer.module.css — Dark Void Theme
-   ============================================= */
-
 .footer {
     width: 100%;
     background: #000000;
     overflow: hidden;
 }
 
-/* ══ CTA Banner ══ */
 .ctaBanner {
     position: relative;
     width: 100%;
@@ -20,14 +15,13 @@
     background: #050008;
 }
 
-/* FloatingLines absolute fill */
+
 .linesWrap {
     position: absolute;
     inset: 0;
     z-index: 0;
 }
 
-/* Bottom gradient — fades banner into footer body */
 .bannerOverlay {
     position: absolute;
     inset: 0;
@@ -40,7 +34,6 @@
     pointer-events: none;
 }
 
-/* Banner text content */
 .bannerContent {
     position: relative;
     z-index: 2;
@@ -52,7 +45,7 @@
 }
 
 .bannerEyebrow {
-    font-size: 0.65rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.22em;
     color: rgba(168, 85, 247, 0.7);
@@ -70,12 +63,11 @@
 }
 
 .bannerHeading em {
-    font-style: italic;
     color: rgba(216, 180, 254, 0.85);
 }
 
 .bannerSub {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     color: rgba(255, 255, 255, .45);
     max-width: 340px;
 }
@@ -87,7 +79,7 @@
     background: #a855f7;
     color: #ffffff;
     border: none;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.25s;
@@ -144,14 +136,14 @@
 }
 
 .logoText {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: 800;
     color: #ffffff;
     letter-spacing: -0.02em;
 }
 
 .brandDesc {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, .35);
     line-height: 1.7;
     max-width: 230px;
@@ -165,7 +157,7 @@
     border-radius: 999px;
     border: 1px solid rgba(255, 255, 255, .1);
     background: rgba(255, 255, 255, .04);
-    font-size: 0.78rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, .5);
     cursor: pointer;
     width: fit-content;
@@ -181,7 +173,7 @@
 .navCol {}
 
 .navHeading {
-    font-size: 0.72rem;
+    font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: 0.12em;
     color: #a855f7;
@@ -198,7 +190,7 @@
 }
 
 .navLink {
-    font-size: 0.82rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, .4);
     text-decoration: none;
     transition: color 0.2s;
@@ -222,7 +214,7 @@
 }
 
 .copyright {
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, .22);
 }
 
@@ -232,7 +224,7 @@
 }
 
 .legalLink {
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, .22);
     text-decoration: none;
     transition: color 0.2s;

@@ -11,7 +11,7 @@ const items = [
 const Navbar = () => {
     return (
         <div className="absolute top-0 left-0 w-full z-20 py-4 md:py-6 px-6 md:px-12 lg:px-20 flex justify-between items-center overflow-hidden">
-            <a href="#" className="studio-logo text-white hover:text-purple-400 transition-colors duration-300 text-2xl md:text-3xl mr-4">
+            <a href="#" className="studio-logo text-white hover:text-purple-400 transition-colors duration-300 text-3xl md:text-4xl mr-4">
                 Bella J
             </a>
             <div className="relative flex-shrink-0">

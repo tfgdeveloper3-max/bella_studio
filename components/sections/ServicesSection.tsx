@@ -37,7 +37,7 @@ export default function ServicesSection() {
             <m.div className={styles.header} variants={fadeUp(0)} initial="hidden" animate={inView ? 'show' : 'hidden'}>
                 <div className={styles.headerLeft}>
                     <div className={styles.eyebrow}>WHAT WE DO</div>
-                    <h2 className={styles.heading}>From product shot to<br /><em>viral phenomenon.</em></h2>
+                    <h2 className={styles.heading}>From Product Shot To<br /><em>Viral Phenomenon.</em></h2>
                     <p className={styles.subheading}>Global on-brand campaigns, product shots, and top-tier filmmaking. Everything a brand needs to show up at the highest level, in every format, every time.</p>
                 </div>
                 <m.button className={styles.ctaBtn} whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
