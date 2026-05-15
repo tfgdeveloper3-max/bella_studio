@@ -1,0 +1,356 @@
+/* =============================================
+   ServicesSection.module.css — Dark Void Theme
+   ============================================= */
+
+.section {
+    position: relative;
+    width: 100%;
+    padding: 6rem 5% 6rem;
+    background: #000000;
+    overflow: hidden;
+}
+
+/* Ambient glows */
+.glowA {
+    position: absolute;
+    top: -10%;
+    left: -8%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(168, 85, 247, .13) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.glowB {
+    position: absolute;
+    bottom: 5%;
+    right: -6%;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139, 92, 246, .1) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ── Header ── */
+.header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #a855f7;
+    margin-bottom: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1.5px;
+    background: #a855f7;
+}
+
+.heading {
+    font-size: clamp(2rem, 3.8vw, 3rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    text-shadow: 0 0 40px rgba(168, 85, 247, .3);
+    margin-bottom: 0.8rem;
+}
+
+.heading em {
+    font-style: italic;
+    color: rgba(216, 180, 254, .8);
+}
+
+.subheading {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, .42);
+    line-height: 1.65;
+    max-width: 420px;
+}
+
+.ctaBtn {
+    flex-shrink: 0;
+    padding: 12px 26px;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #0a0a0a;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.25s, box-shadow 0.25s;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+}
+
+.ctaBtn:hover {
+    background: #d8b4fe;
+    box-shadow: 0 0 20px rgba(168, 85, 247, .4);
+}
+
+/* ── Grid ── */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Cards ── */
+.card {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* Wide card spans all 3 cols */
+.cardWide {
+    grid-column: 1 / -1;
+}
+
+/* ── Card inner ── */
+.cardInner {
+    position: relative;
+    height: 380px;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    /* Purple border on hover via outline trick */
+    outline: 1px solid rgba(255, 255, 255, .07);
+    transition: outline-color 0.35s;
+}
+
+.cardInner:hover {
+    outline-color: rgba(168, 85, 247, .4);
+}
+
+/* Wide card taller */
+.cardInnerWide {
+    height: 320px;
+}
+
+/* ── Image layer ── */
+.imgWrap {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.img {
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+}
+
+/* Zoom on parent hover */
+.cardInner:hover .img {
+    transform: scale(1.08);
+}
+
+/* Dark gradient overlay — stronger at bottom */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, .08) 0%,
+            rgba(0, 0, 0, .18) 40%,
+            rgba(0, 0, 0, .72) 75%,
+            rgba(0, 0, 0, .88) 100%);
+    transition: background 0.4s ease;
+}
+
+.cardInner:hover .overlay {
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, .05) 0%,
+            rgba(0, 0, 0, .15) 35%,
+            rgba(0, 0, 0, .65) 70%,
+            rgba(0, 0, 0, .85) 100%);
+}
+
+/* Purple glow on hover — top-left ambience */
+.hoverGlow {
+    position: absolute;
+    top: -30%;
+    left: -20%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(168, 85, 247, .28) 0%, transparent 65%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cardInner:hover .hoverGlow {
+    opacity: 1;
+}
+
+/* ── Tag chip ── */
+.tag {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 3;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, .65);
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 999px;
+    padding: 4px 11px;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s;
+}
+
+.cardInner:hover .tag {
+    background: rgba(168, 85, 247, .2);
+    border-color: rgba(168, 85, 247, .4);
+    color: #d8b4fe;
+}
+
+/* ── Text block ── slides up on hover ── */
+.textBlock {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    padding: 1.5rem 1.6rem 1.6rem;
+    /* desc + arrow hidden, shifted down */
+    --slide-offset: 18px;
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    margin-bottom: 0;
+    /* title always visible */
+    transform: translateY(0);
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cardInner:hover .cardTitle {
+    transform: translateY(calc(-1 * var(--slide-offset)));
+}
+
+.cardDesc {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, .62);
+    line-height: 1.55;
+    margin-top: 6px;
+    /* hidden initially */
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+        opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.05s,
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.05s;
+}
+
+.cardInner:hover .cardDesc {
+    opacity: 1;
+    transform: translateY(calc(-1 * var(--slide-offset)));
+}
+
+/* Explore arrow — appears last */
+.arrow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: #a855f7;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+        opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1) 0.1s,
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.1s;
+}
+
+.cardInner:hover .arrow {
+    opacity: 1;
+    transform: translateY(calc(-1 * var(--slide-offset)));
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cardWide {
+        grid-column: 1 / -1;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 580px) {
+    .section {
+        padding: 4rem 4% 4rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .cardInner {
+        height: 300px;
+    }
+
+    .cardInnerWide {
+        height: 260px;
+    }
+
+    .heading {
+        font-size: 1.9rem;
+    }
+}
+
+/* ── Video media (filmmaking card) ── */
+.video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+    display: block;
+}
+
+.cardInner:hover .video {
+    transform: scale(1.08);
+}
