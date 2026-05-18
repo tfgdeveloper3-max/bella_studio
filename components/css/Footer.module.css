@@ -4,6 +4,10 @@
     overflow: hidden;
 }
 
+.logo_img{
+    width: 200px;
+}
+
 .ctaBanner {
     position: relative;
     width: 100%;

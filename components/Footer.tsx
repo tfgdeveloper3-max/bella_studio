@@ -40,12 +40,7 @@ export default function Footer() {
                 <div className={styles.inner}>
                     <div className={styles.brand}>
                         <div className={styles.logoMark}>
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                <rect width="28" height="28" rx="6" fill="#a855f7" fillOpacity="0.15" />
-                                <path d="M7 20L14 8L21 20" stroke="#a855f7" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M10 16h8" stroke="#a855f7" strokeWidth="2" strokeLinecap="round" />
-                            </svg>
-                            <span className={styles.logoText}>Bella J</span>
+                            <img src="/images/Logo.png" alt="" className={styles.logo_img} />
                         </div>
                         <p className={styles.brandDesc}>The creative platform to direct your best work. Trusted by studios, agencies, and enterprises worldwide.</p>
                         <div className={styles.langPill}>

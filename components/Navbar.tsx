@@ -1,5 +1,6 @@
 import React from 'react';
 import GooeyNav from '@/components/GooeyNav';
+import styles from '@/components/css/Navbar.module.css';
 
 const items = [
     { label: "Work", href: "#work" },
@@ -12,7 +13,7 @@ const Navbar = () => {
     return (
         <div className="absolute top-0 left-0 w-full z-20 py-4 md:py-6 px-6 md:px-12 lg:px-20 flex justify-between items-center overflow-hidden">
             <a href="#" className="studio-logo text-white hover:text-purple-400 transition-colors duration-300 text-3xl md:text-4xl mr-4">
-                Bella J
+                <img src="/images/logo.png" alt="" className={styles.logo_img} />
             </a>
             <div className="relative flex-shrink-0">
                 <GooeyNav
