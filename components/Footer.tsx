@@ -40,7 +40,7 @@ export default function Footer() {
                 <div className={styles.inner}>
                     <div className={styles.brand}>
                         <div className={styles.logoMark}>
-                            <img src="/images/Logo.png" alt="" className={styles.logo_img} />
+                            <img src="/images/logo.png" alt="" className={styles.logo_img} />
                         </div>
                         <p className={styles.brandDesc}>The creative platform to direct your best work. Trusted by studios, agencies, and enterprises worldwide.</p>
                         <div className={styles.langPill}>
