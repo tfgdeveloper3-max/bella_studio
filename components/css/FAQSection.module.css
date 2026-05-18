@@ -8,6 +8,7 @@
     padding: 7rem 5% 7rem;
     background: #000000;
     overflow: hidden;
+    contain: layout style paint;
 }
 
 .glowA {

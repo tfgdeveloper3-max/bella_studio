@@ -3,4 +3,6 @@
   height: 100%;
   position: relative;
   overflow: hidden;
+  contain: layout style paint;
+  will-change: transform;
 }

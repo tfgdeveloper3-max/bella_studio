@@ -14,7 +14,7 @@ const Hero = () => {
                 warpAmount={0}
             />
             <div className="hero-content">
-                <h1>Welcome To The Void</h1>
+                <h1>Welcome To The Bella J</h1>
                 <p>Experience the next generation of dark web aesthetics.</p>
                 <button className="hero-btn">Enter Now</button>
             </div>
