@@ -1,8 +1,10 @@
 .section {
     position: relative;
     width: 100%;
+    background: #1a0510;
     padding: 7rem 5% 6rem;
-    background-color: #000000;
+    background: #1a0510;
+    background-image: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(242, 122, 193, 0.12) 0%, transparent 65%);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -10,7 +12,6 @@
     gap: 2.5rem;
 }
 
-/* ── Ambient glows ── */
 .glowLeft {
     position: absolute;
     top: -10%;
@@ -18,9 +19,10 @@
     width: 520px;
     height: 520px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.18) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(242, 122, 193, 0.2) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
+    filter: blur(4px);
 }
 
 .glowRight {
@@ -30,12 +32,12 @@
     width: 420px;
     height: 420px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.14) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(180, 40, 130, 0.15) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
+    filter: blur(4px);
 }
 
-/* ── Top text ── */
 .topText {
     text-align: center;
     z-index: 1;
@@ -47,28 +49,27 @@
     color: #ffffff;
     margin: 0 0 0.6rem;
     letter-spacing: -0.03em;
-    text-shadow:
-        0 0 30px rgba(168, 85, 247, 0.5),
-        0 0 60px rgba(168, 85, 247, 0.2);
+    text-shadow: var(--neon-text-md);
 }
 
 .subheading {
     font-size: 1.5rem;
-    color: rgba(216, 180, 254, 0.75);
+    color: var(--neon);
+    text-shadow: var(--neon-text-sm);
     margin: 0;
     font-weight: 400;
 }
 
-/* ── Tab bar ── */
 .tabBar {
     display: flex;
     align-items: center;
     gap: 4px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(242, 122, 193, 0.06);
+    border: 1px solid var(--neon-mid);
     border-radius: 999px;
     padding: 5px;
     z-index: 1;
+    box-shadow: 0 0 16px rgba(242, 122, 193, 0.1);
 }
 
 .tab {
@@ -76,7 +77,7 @@
     border-radius: 999px;
     border: none;
     background: transparent;
-    color: rgba(255, 255, 255, 0.45);
+    color: var(--muted-foreground);
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
@@ -85,32 +86,31 @@
 }
 
 .tab:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: var(--neon);
 }
 
 .tabActive {
-    background: #ffffff;
-    color: #0a0a0a !important;
-    font-weight: 600;
-    box-shadow: 0 2px 12px rgba(168, 85, 247, 0.3);
+    background: var(--neon);
+    color: var(--primary-foreground) !important;
+    font-weight: 700;
+    box-shadow: var(--neon-glow-sm);
 }
 
-/* ── Main card ── */
 .card {
     position: relative;
     width: 100%;
     max-width: 1100px;
     display: flex;
     align-items: stretch;
-    background: #111111;
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: #250818;
+    border: 1px solid var(--neon-mid);
     border-radius: 20px;
     overflow: hidden;
     z-index: 1;
     min-height: 520px;
+    box-shadow: 0 0 40px rgba(242, 122, 193, 0.08);
 }
 
-/* Grain texture */
 .grain {
     position: absolute;
     inset: 0;
@@ -121,7 +121,6 @@
     opacity: 0.6;
 }
 
-/* ── Left column ── */
 .left {
     position: relative;
     z-index: 1;
@@ -154,23 +153,25 @@
 }
 
 .menuItem:hover {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(242, 122, 193, 0.06);
 }
 
 .menuItemActive {
-    background: rgba(168, 85, 247, 0.08) !important;
+    background: rgba(242, 122, 193, 0.1) !important;
 }
 
 .menuIcon {
     font-size: 1.5rem;
-    color: rgba(168, 85, 247, 0.7);
+    color: var(--neon-mid);
     margin-top: 2px;
     flex-shrink: 0;
     line-height: 1;
+    transition: color 0.25s;
 }
 
 .menuItemActive .menuIcon {
-    color: #a855f7;
+    color: var(--neon);
+    text-shadow: var(--neon-text-sm);
 }
 
 .menuText {
@@ -182,7 +183,7 @@
 .menuTitle {
     font-size: 1.2rem;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--muted-foreground);
     transition: color 0.25s;
     letter-spacing: 0.01em;
 }
@@ -193,13 +194,12 @@
 
 .menuDesc {
     font-size: 1rem;
-    color: rgba(216, 180, 254, 0.6);
+    color: var(--neon);
     line-height: 1.4;
     display: block;
     overflow: hidden;
 }
 
-/* Active indicator bar */
 .menuBar {
     position: absolute;
     left: 0;
@@ -207,12 +207,13 @@
     bottom: 20%;
     width: 2.5px;
     border-radius: 2px;
-    background: linear-gradient(180deg, #c084fc, #7c3aed);
+    background: var(--neon);
+    box-shadow: var(--neon-glow-sm);
 }
 
 .moreLink {
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.45);
+    color: var(--muted-foreground);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -223,7 +224,8 @@
 }
 
 .moreLink:hover {
-    color: #a855f7;
+    color: var(--neon);
+    text-shadow: var(--neon-text-sm);
 }
 
 .moreLink span {
@@ -234,19 +236,13 @@
     transform: translateX(4px);
 }
 
-/* ── Divider ── */
 .divider {
     width: 1px;
-    background: linear-gradient(180deg,
-            transparent 0%,
-            rgba(168, 85, 247, 0.2) 20%,
-            rgba(168, 85, 247, 0.35) 50%,
-            rgba(168, 85, 247, 0.2) 80%,
-            transparent 100%);
+    background: linear-gradient(180deg, transparent 0%, var(--neon-mid) 20%, rgba(242, 122, 193, 0.5) 50%, var(--neon-mid) 80%, transparent 100%);
+    box-shadow: 0 0 8px rgba(242, 122, 193, 0.2);
     flex-shrink: 0;
 }
 
-/* ── Right column ── */
 .right {
     position: relative;
     z-index: 1;
@@ -269,12 +265,13 @@
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.18em;
-    color: #a855f7;
-    background: rgba(168, 85, 247, 0.1);
-    border: 1px solid rgba(168, 85, 247, 0.25);
+    color: var(--neon);
+    background: rgba(242, 122, 193, 0.1);
+    border: 1px solid var(--neon-mid);
     border-radius: 999px;
     padding: 3px 12px;
     width: fit-content;
+    box-shadow: 0 0 8px rgba(242, 122, 193, 0.15);
 }
 
 .panelHeadline {
@@ -284,29 +281,30 @@
     line-height: 1.2;
     letter-spacing: -0.025em;
     margin: 0;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 .panelBody {
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.45);
+    color: var(--muted-foreground);
     line-height: 1.7;
     margin: 0;
     max-width: 400px;
 }
 
-/* ── Media / Visual box ── */
 .mediaBox {
     position: relative;
     flex: 1;
     min-height: 220px;
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.025);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(242, 122, 193, 0.04);
+    border: 1px solid var(--neon-mid);
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 0.5rem;
+    box-shadow: inset 0 0 30px rgba(242, 122, 193, 0.05);
 }
 
 .mediaGlow {
@@ -314,28 +312,29 @@
     width: 260px;
     height: 260px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 65%);
+    background: radial-gradient(circle, rgba(242, 122, 193, 0.2) 0%, transparent 65%);
     pointer-events: none;
+    filter: blur(8px);
 }
 
 .bigIcon {
     font-size: 8rem;
-    color: rgba(168, 85, 247, 0.55);
+    color: var(--neon);
     line-height: 1;
     user-select: none;
-    filter: drop-shadow(0 0 24px rgba(168, 85, 247, 0.4));
+    filter: drop-shadow(0 0 24px rgba(242, 122, 193, 0.8)) drop-shadow(0 0 48px rgba(242, 122, 193, 0.3));
     z-index: 1;
 }
 
-/* Floating cards */
 .floatCard {
     position: absolute;
     z-index: 2;
-    background: rgba(20, 20, 30, 0.85);
-    border: 1px solid rgba(168, 85, 247, 0.2);
+    background: #250818;
+    border: 1px solid var(--neon-mid);
     border-radius: 10px;
     padding: 8px 14px;
     backdrop-filter: blur(8px);
+    box-shadow: 0 0 12px rgba(242, 122, 193, 0.15);
 }
 
 .floatCard1 {
@@ -358,22 +357,22 @@
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: #a855f7;
+    background: var(--neon);
     flex-shrink: 0;
+    box-shadow: var(--neon-glow-sm);
 }
 
 .fcDotPurple {
-    background: #c084fc;
+    background: var(--neon);
 }
 
 .floatCardInner span {
     font-size: 1rem;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.7);
+    color: #ffffff;
     white-space: nowrap;
 }
 
-/* Search bar decoration */
 .searchBar {
     position: absolute;
     bottom: 16px;
@@ -382,27 +381,27 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(242, 122, 193, 0.08);
+    border: 1px solid var(--neon-mid);
     border-radius: 999px;
     padding: 7px 20px;
     min-width: 200px;
     backdrop-filter: blur(10px);
     z-index: 3;
+    box-shadow: 0 0 10px rgba(242, 122, 193, 0.15);
 }
 
 .searchIcon {
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.3);
+    color: var(--neon);
 }
 
 .searchText {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--muted-foreground);
     white-space: nowrap;
 }
 
-/* ── Responsive ── */
 @media (max-width: 900px) {
     .card {
         flex-direction: column;
@@ -410,7 +409,7 @@
 
     .left {
         flex: none;
-        border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+        border-bottom: 1px solid var(--neon-mid);
         padding-bottom: 1.5rem;
     }
 

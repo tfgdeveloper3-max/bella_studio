@@ -42,30 +42,6 @@ export default function PricingSection() {
 
     return (
         <section className={styles.section} ref={ref}>
-            <div className={styles.glowA} aria-hidden />
-            <div className={styles.glowB} aria-hidden />
-
-            <m.div className={styles.plansWrap} variants={fadeUp(0)} initial="hidden" animate={inView ? 'show' : 'hidden'}>
-                <div className={styles.eyebrow}>PRICING</div>
-                <h2 className={styles.heading}>Team Plans Built For Creative Work At Scale</h2>
-            </m.div>
-
-            <m.div className={styles.plansGrid} variants={fadeUp(0.1)} initial="hidden" animate={inView ? 'show' : 'hidden'}>
-                <div className={styles.planCard}>
-                    <span className={styles.planTag}>◈ BUSINESS</span>
-                    <div><h3 className={styles.planName}>Business</h3><p className={styles.planDesc}>For creative teams and agencies ready to move faster and produce more. Shared credits, collaborative workflows, and access to every AI model.</p></div>
-                    <ul className={styles.planList}><li>Shared credit pool</li><li>Collaborative workflows</li><li>All AI models included</li></ul>
-                    <button className={`${styles.planBtn} ${styles.btnOutline}`}>Learn more →</button>
-                </div>
-                <div className={`${styles.planCard} ${styles.planEnterprise}`}>
-                    <span className={`${styles.planTag} ${styles.planTagEnt}`}>◇ ENTERPRISE</span>
-                    <div><h3 className={styles.planName}>Enterprise</h3><p className={styles.planDesc}>For organizations where creative output is mission-critical. Full legal indemnification, enterprise-grade security, unlimited users, custom SSO.</p></div>
-                    <ul className={`${styles.planList} ${styles.planListEnt}`}><li>Full legal indemnification</li><li>Unlimited users + custom SSO</li><li>Dedicated team from day one</li></ul>
-                    <button className={`${styles.planBtn} ${styles.btnPurple}`}>Talk to the team →</button>
-                </div>
-            </m.div>
-
-            <div className={styles.divider} aria-hidden />
 
             <m.div className={styles.testWrap} variants={fadeUp(0.08)} initial="hidden" animate={inView ? 'show' : 'hidden'}>
                 <div className={styles.testHeader}>

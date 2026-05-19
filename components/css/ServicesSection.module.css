@@ -1,12 +1,13 @@
 .section {
     position: relative;
     width: 100%;
+    background: #1a0510;
     padding: 6rem 5% 6rem;
-    background: #000000;
+
+    background-image: radial-gradient(ellipse 50% 40% at 100% 50%, rgba(242, 122, 193, 0.09) 0%, transparent 60%);
     overflow: hidden;
 }
 
-/* Ambient glows */
 .glowA {
     position: absolute;
     top: -10%;
@@ -14,9 +15,10 @@
     width: 500px;
     height: 500px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(168, 85, 247, .13) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(242, 122, 193, 0.16) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
+    filter: blur(2px);
 }
 
 .glowB {
@@ -26,12 +28,12 @@
     width: 380px;
     height: 380px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(139, 92, 246, .1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(180, 40, 130, 0.13) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
+    filter: blur(2px);
 }
 
-/* ── Header ── */
 .header {
     display: flex;
     align-items: flex-end;
@@ -46,7 +48,8 @@
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.2em;
-    color: #a855f7;
+    color: var(--neon);
+    text-shadow: var(--neon-text-sm);
     margin-bottom: 0.7rem;
     display: flex;
     align-items: center;
@@ -58,7 +61,8 @@
     display: inline-block;
     width: 24px;
     height: 1.5px;
-    background: #a855f7;
+    background: var(--neon);
+    box-shadow: var(--neon-glow-sm);
 }
 
 .heading {
@@ -67,18 +71,19 @@
     line-height: 1.12;
     letter-spacing: -0.03em;
     color: #ffffff;
-    text-shadow: 0 0 40px rgba(168, 85, 247, .3);
+    text-shadow: var(--neon-text-sm);
     margin-bottom: 0.8rem;
 }
 
 .heading em {
     font-style: normal;
-    color: rgba(216, 180, 254, .8);
+    color: var(--neon);
+    text-shadow: var(--neon-text-md);
 }
 
 .subheading {
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, .42);
+    color: var(--muted-foreground);
     line-height: 1.65;
     max-width: 420px;
 }
@@ -87,24 +92,24 @@
     flex-shrink: 0;
     padding: 12px 26px;
     border-radius: 8px;
-    background: #ffffff;
-    color: #0a0a0a;
+    background: var(--neon);
+    color: var(--primary-foreground);
     border: none;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     white-space: nowrap;
-    transition: background 0.25s, box-shadow 0.25s;
+    transition: all 0.25s;
     align-self: flex-start;
     margin-top: 0.5rem;
+    box-shadow: var(--neon-glow-sm);
 }
 
 .ctaBtn:hover {
-    background: #d8b4fe;
-    box-shadow: 0 0 20px rgba(168, 85, 247, .4);
+    box-shadow: var(--neon-glow-md);
+    transform: translateY(-2px);
 }
 
-/* ── Grid ── */
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -114,38 +119,34 @@
     z-index: 1;
 }
 
-/* ── Cards ── */
 .card {
     border-radius: 16px;
     overflow: hidden;
 }
 
-/* Wide card spans all 3 cols */
 .cardWide {
     grid-column: 1 / -1;
 }
 
-/* ── Card inner ── */
 .cardInner {
     position: relative;
     height: 380px;
     border-radius: 16px;
     overflow: hidden;
     cursor: pointer;
-    outline: 1px solid rgba(255, 255, 255, .07);
-    transition: outline-color 0.35s;
+    outline: 1px solid var(--border);
+    transition: outline-color 0.35s, box-shadow 0.35s;
 }
 
 .cardInner:hover {
-    outline-color: rgba(168, 85, 247, .4);
+    outline-color: var(--neon-mid);
+    box-shadow: 0 0 30px rgba(242, 122, 193, 0.15);
 }
 
-/* Wide card taller */
 .cardInnerWide {
     height: 320px;
 }
 
-/* ── Image layer ── */
 .imgWrap {
     position: absolute;
     inset: 0;
@@ -160,32 +161,21 @@
     will-change: transform;
 }
 
-/* Zoom on parent hover */
 .cardInner:hover .img {
     transform: scale(1.08);
 }
 
-/* Dark gradient overlay — stronger at bottom */
 .overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, .08) 0%,
-            rgba(0, 0, 0, .18) 40%,
-            rgba(0, 0, 0, .72) 75%,
-            rgba(0, 0, 0, .88) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .08) 0%, rgba(0, 0, 0, .18) 40%, rgba(0, 0, 0, .75) 75%, rgba(0, 0, 0, .9) 100%);
     transition: background 0.4s ease;
 }
 
 .cardInner:hover .overlay {
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, .05) 0%,
-            rgba(0, 0, 0, .15) 35%,
-            rgba(0, 0, 0, .65) 70%,
-            rgba(0, 0, 0, .85) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .05) 0%, rgba(0, 0, 0, .15) 35%, rgba(0, 0, 0, .65) 70%, rgba(0, 0, 0, .85) 100%);
 }
 
-/* Purple glow on hover — top-left ambience */
 .hoverGlow {
     position: absolute;
     top: -30%;
@@ -193,18 +183,18 @@
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(168, 85, 247, .28) 0%, transparent 65%);
+    background: radial-gradient(circle, rgba(242, 122, 193, 0.3) 0%, transparent 65%);
     opacity: 0;
     transition: opacity 0.5s ease;
     pointer-events: none;
     z-index: 1;
+    filter: blur(4px);
 }
 
 .cardInner:hover .hoverGlow {
     opacity: 1;
 }
 
-/* ── Tag chip ── */
 .tag {
     position: absolute;
     top: 16px;
@@ -223,12 +213,12 @@
 }
 
 .cardInner:hover .tag {
-    background: rgba(168, 85, 247, .2);
-    border-color: rgba(168, 85, 247, .4);
-    color: #d8b4fe;
+    background: rgba(242, 122, 193, 0.2);
+    border-color: var(--neon-mid);
+    color: var(--neon);
+    box-shadow: 0 0 10px rgba(242, 122, 193, 0.3);
 }
 
-/* ── Text block ── slides up on hover ── */
 .textBlock {
     position: absolute;
     bottom: 0;
@@ -258,12 +248,9 @@
     color: rgba(255, 255, 255, .62);
     line-height: 1.55;
     margin-top: 6px;
-    /* hidden initially */
     opacity: 0;
     transform: translateY(12px);
-    transition:
-        opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.05s,
-        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.05s;
+    transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.05s, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.05s;
 }
 
 .cardInner:hover .cardDesc {
@@ -271,20 +258,18 @@
     transform: translateY(calc(-1 * var(--slide-offset)));
 }
 
-/* Explore arrow — appears last */
 .arrow {
     display: flex;
     align-items: center;
     gap: 6px;
     font-size: 1rem;
     font-weight: 600;
-    color: #a855f7;
+    color: var(--neon);
+    text-shadow: var(--neon-text-sm);
     margin-top: 10px;
     opacity: 0;
     transform: translateY(10px);
-    transition:
-        opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1) 0.1s,
-        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.1s;
+    transition: opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1) 0.1s, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.1s;
 }
 
 .cardInner:hover .arrow {
@@ -292,7 +277,6 @@
     transform: translateY(calc(-1 * var(--slide-offset)));
 }
 
-/* ── Responsive ── */
 @media (max-width: 900px) {
     .grid {
         grid-template-columns: 1fr 1fr;
@@ -331,7 +315,6 @@
     }
 }
 
-/* ── Video media (filmmaking card) ── */
 .video {
     position: absolute;
     inset: 0;

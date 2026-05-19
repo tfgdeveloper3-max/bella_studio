@@ -50,10 +50,11 @@ export default function BentoSection() {
                     transition={{ duration: 0.55, ease: EASE }}
                 >
                     <h2 className={styles.heading}>
-                        Start Simple.<br />Scale When You&apos;re Ready
+                        Where Authors Drop<br />Gems, Lessons, And Inspiration
                     </h2>
                     <p className={styles.subheading}>
-                        From a single tool to a complete workflow, at your own pace.
+                        Unfiltered moments, unexpected insights, and thought-provoking conversations that leave you
+                        inspired long after the episode ends.
                     </p>
                 </m.div>
 
